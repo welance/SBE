@@ -34,5 +34,13 @@ class Xonu_SBE_Model_Product extends Mage_Catalog_Model_Product
 		$templateFilter = Mage::getModel('cms/template_filter');
 		$html = $templateFilter->filter($content);
 		return $html;
-	}	
+	}
+	
+	function getDirectDescription()
+	{
+		$content = $this->getData('direct_description');
+		$templateFilter = Mage::getModel('cms/template_filter');
+		$html = $templateFilter->filter($content);
+		return $html;
+	}
 }
